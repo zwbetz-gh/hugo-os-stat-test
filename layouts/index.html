@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Hugo os.Stat Testing</title>
+  </head>
+  <body>
+    <h1>Hugo <code>os.Stat</code> Testing</h1>
+
+    {{ $file := "data/links.json" }}
+    {{ $stat :=  os.Stat $file }}
+    <p>File Name: <code>{{ $stat.Name }}</code></p>
+    <p>File Size: <code>{{ $stat.Size }}</code> bits</p>
+    <p>File Mode: <code>{{ $stat.Mode }}</code></p>
+    <p>File ModTime: <code>{{ $stat.ModTime }}</code></p>
+    <p>File IsDir: <code>{{ $stat.IsDir }}</code></p>
+    <p>File Sys: <code>{{ $stat.Sys }}</code></p>
+
+  </body>
+</html>
