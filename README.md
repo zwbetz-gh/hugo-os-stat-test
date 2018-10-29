@@ -1,0 +1,2 @@
+# Hugo `os.Stat` Test
+
