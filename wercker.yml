@@ -6,6 +6,9 @@ build:
 deploy-firebase:
   steps:
     - script:
+        name: update apt-get
+        code: apt-get update
+    - script:
         name: install curl
         code: apt-get install curl
     - script:
