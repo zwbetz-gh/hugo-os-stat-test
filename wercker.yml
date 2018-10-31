@@ -1,10 +1,6 @@
 box: debian
 build:
   steps:
-    - arjen/hugo-build:
-        version: "0.50"
-deploy-firebase:
-  steps:
     - npm-install
     - script:
         name: run npm build script
@@ -14,6 +10,10 @@ deploy-firebase:
         code: |
           echo "node version $(node -v) running"
           echo "npm version $(npm -v) running"
+    - arjen/hugo-build:
+        version: "0.50"
+deploy-firebase:
+  steps:
     - devillexio/firebase-deploy@1.2.0:
         project: $FIREBASE_PROJECT_NAME
         token: $FIREBASE_TOKEN
