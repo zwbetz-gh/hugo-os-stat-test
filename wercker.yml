@@ -5,8 +5,11 @@ build:
         version: "0.50"
 deploy-firebase:
   steps:
-    - bigtruedata/node-install:
-        version: 7.4.0
+    - script:
+        name: install node
+        code: |
+          curl -sL https://deb.nodesource.com/setup_11.x | bash -
+          apt-get install -y nodejs
     - script:
         name: install firebase
         code: npm install -g firebase-tools
