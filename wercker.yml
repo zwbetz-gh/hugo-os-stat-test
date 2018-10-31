@@ -3,8 +3,6 @@ build:
   steps:
     - arjen/hugo-build:
         version: "0.50"
-deploy-firebase:
-  steps:
     - script:
         name: update apt-get
         code: apt-get update
