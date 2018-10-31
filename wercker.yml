@@ -5,6 +5,10 @@ build:
         version: "0.50"
 deploy-firebase:
   steps:
+    - npm-install
+    - script:
+        name: install firebase
+        code: npm install -g firebase-tools
     - devillexio/firebase-deploy@1.2.0:
         project: $FIREBASE_PROJECT_NAME
         token: $FIREBASE_TOKEN
