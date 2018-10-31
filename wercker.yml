@@ -10,7 +10,7 @@ deploy-firebase:
         code: apt-get update
     - script:
         name: install curl
-        code: apt-get install curl
+        code: apt-get install -y curl
     - script:
         name: install node
         code: |
