@@ -12,6 +12,9 @@ deploy-firebase:
         name: install curl
         code: apt-get install -y curl
     - script:
+        name: install gnupg
+        code: apt-get install -y gnupg
+    - script:
         name: install node
         code: |
           curl -sL https://deb.nodesource.com/setup_11.x | bash -
