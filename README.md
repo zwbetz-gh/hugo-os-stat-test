@@ -10,7 +10,3 @@ A sample project for testing the Hugo function [`os.Stat`](https://gohugo.io/fun
     1. `cd hugo-os-stat-test`
     1. `hugo server`
 1. Navigate to `http://localhost:1313/` in your browser
-
-## Screenshot
-
-![Screenshot of output](screenshots/output.png)

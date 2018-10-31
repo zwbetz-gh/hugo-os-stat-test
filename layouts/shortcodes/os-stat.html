@@ -1,0 +1,7 @@
+{{ $file := .Get 0 }}
+{{ $stat := os.Stat $file }}
+<p><strong>File Name:</strong> <code>{{ $stat.Name }}</code></p>
+<p><strong>File Size:</strong> <code>{{ $stat.Size }} bits</code></p>
+<p><strong>File Mode:</strong> <code>{{ $stat.Mode }}</code></p>
+<p><strong>File ModTime:</strong> <code>{{ $stat.ModTime }}</code></p>
+<p><strong>File IsDir:</strong> <code>{{ $stat.IsDir }}</code></p>
