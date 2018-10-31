@@ -6,6 +6,9 @@ build:
 deploy-firebase:
   steps:
     - script:
+        name: install curl
+        code: apt-get install curl
+    - script:
         name: install node
         code: |
           curl -sL https://deb.nodesource.com/setup_11.x | bash -
