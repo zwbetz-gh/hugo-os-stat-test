@@ -12,7 +12,7 @@ Hugo's `os.Stat` function is useful for getting info about a file. For example:
 {{ $file := "data/links.json" }}
 {{ $stat := os.Stat $file }}
 File Name: {{ $stat.Name }}
-File Size: {{ $stat.Size }} bits
+File Size: {{ $stat.Size }} bytes
 File Mode: {{ $stat.Mode }}
 File ModTime: {{ $stat.ModTime }}
 File IsDir: {{ $stat.IsDir }}
